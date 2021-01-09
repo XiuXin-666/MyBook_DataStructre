@@ -1,2 +1,2 @@
-# MyBook_DataStructre
+# DataStructre
 My first book
