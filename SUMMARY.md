@@ -7,6 +7,11 @@
     * [区别](线性表/区别.md)
     * [应用](线性表/应用.md)
 * [栈和队列](栈和队列/README.md)
-* [第三章](Chapter3/README.md)
-* [第四章](Chapter4/README.md)
+* [数组](数组/README.md)
+* [字符串](字符串/README.md)
+* [哈希表](哈希表/README.md)
+* [树和二叉树](树和二叉树/README.md)
+* [图](图/README.md)
+* [查找算法](查找算法/README.md)
+* [排序算法](排序算法/README.md)
 
