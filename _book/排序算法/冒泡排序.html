@@ -1,0 +1,813 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>冒泡排序 · 数据结构简单学</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="修心">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="简单选择排序.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    
+        <link rel="shortcut icon" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../source/images/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../source/images/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../source/images/apple-touch-icon.jpg">
+        
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"修心","repo":"mysql","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://space.bilibili.com/479922793" target="_blank" class="custom-link">我的b站空间</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../绪论/">
+            
+                <a href="../绪论/">
+            
+                    
+                    绪论
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../绪论/数据结构基本概念.html">
+            
+                <a href="../绪论/数据结构基本概念.html">
+            
+                    
+                    数据结构基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../绪论/算法基本概念.html">
+            
+                <a href="../绪论/算法基本概念.html">
+            
+                    
+                    算法基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../线性表/">
+            
+                <a href="../线性表/">
+            
+                    
+                    线性表
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../线性表/顺序表.html">
+            
+                <a href="../线性表/顺序表.html">
+            
+                    
+                    顺序表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../线性表/单链表.html">
+            
+                <a href="../线性表/单链表.html">
+            
+                    
+                    单链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../线性表/双链表.html">
+            
+                <a href="../线性表/双链表.html">
+            
+                    
+                    双链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../线性表/循环链表.html">
+            
+                <a href="../线性表/循环链表.html">
+            
+                    
+                    循环链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../线性表/区别.html">
+            
+                <a href="../线性表/区别.html">
+            
+                    
+                    区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../线性表/应用.html">
+            
+                <a href="../线性表/应用.html">
+            
+                    
+                    应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../栈和队列/">
+            
+                <a href="../栈和队列/">
+            
+                    
+                    栈和队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../数组/">
+            
+                <a href="../数组/">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../字符串/">
+            
+                <a href="../字符串/">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../哈希表/">
+            
+                <a href="../哈希表/">
+            
+                    
+                    哈希表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../树和二叉树/">
+            
+                <a href="../树和二叉树/">
+            
+                    
+                    树和二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../图/">
+            
+                <a href="../图/">
+            
+                    
+                    图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../查找算法/">
+            
+                <a href="../查找算法/">
+            
+                    
+                    查找算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    排序算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.11.1" data-path="冒泡排序.html">
+            
+                <a href="冒泡排序.html">
+            
+                    
+                    冒泡排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="简单选择排序.html">
+            
+                <a href="简单选择排序.html">
+            
+                    
+                    简单选择排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="简单插入排序.html">
+            
+                <a href="简单插入排序.html">
+            
+                    
+                    简单插入排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="希尔排序.html">
+            
+                <a href="希尔排序.html">
+            
+                    
+                    希尔排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="归并排序.html">
+            
+                <a href="归并排序.html">
+            
+                    
+                    归并排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="快速排序.html">
+            
+                <a href="快速排序.html">
+            
+                    
+                    快速排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="堆排序.html">
+            
+                <a href="堆排序.html">
+            
+                    
+                    堆排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../STL系列/">
+            
+                <a href="../STL系列/">
+            
+                    
+                    STL系列
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../STL系列/基础知识.html">
+            
+                <a href="../STL系列/基础知识.html">
+            
+                    
+                    基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../STL系列/Vector 动态数组.html">
+            
+                <a href="../STL系列/Vector 动态数组.html">
+            
+                    
+                    Vector 动态数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../STL系列/List 链表.html">
+            
+                <a href="../STL系列/List 链表.html">
+            
+                    
+                    List 链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../STL系列/Stack 栈.html">
+            
+                <a href="../STL系列/Stack 栈.html">
+            
+                    
+                    Stack 栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../STL系列/Queue 队列.html">
+            
+                <a href="../STL系列/Queue 队列.html">
+            
+                    
+                    Queue 队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../STL系列/Set 集合.html">
+            
+                <a href="../STL系列/Set 集合.html">
+            
+                    
+                    Set 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../STL系列/Map.html">
+            
+                <a href="../STL系列/Map.html">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../总结与展望/">
+            
+                <a href="../总结与展望/">
+            
+                    
+                    总结与展望
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >冒泡排序</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5192;&#x6CE1;&#x6392;&#x5E8F;"><b></b>&#x5192;&#x6CE1;&#x6392;&#x5E8F;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7B97;&#x6CD5;&#x601D;&#x60F3;&#xFF1A;"><b></b>&#x7B97;&#x6CD5;&#x601D;&#x60F3;&#xFF1A;</a></li><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF08;c&#xFF1A;"><b></b>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF08;C++)&#xFF1A;</a></li><li><span class="title-icon "></span><a href="#&#x8F93;&#x51FA;&#x7ED3;&#x679C;"><b></b>&#x8F93;&#x51FA;&#x7ED3;&#x679C;:</a></li></ul></ul></div><a href="#&#x5192;&#x6CE1;&#x6392;&#x5E8F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5192;&#x6CE1;&#x6392;&#x5E8F;"><a name="&#x5192;&#x6CE1;&#x6392;&#x5E8F;" class="anchor-navigation-ex-anchor" href="#&#x5192;&#x6CE1;&#x6392;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5192;&#x6CE1;&#x6392;&#x5E8F;" class="plugin-anchor" href="#&#x5192;&#x6CE1;&#x6392;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5192;&#x6CE1;&#x6392;&#x5E8F;</h1>
+<h2 id="&#x7B97;&#x6CD5;&#x601D;&#x60F3;&#xFF1A;"><a name="&#x7B97;&#x6CD5;&#x601D;&#x60F3;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x7B97;&#x6CD5;&#x601D;&#x60F3;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B97;&#x6CD5;&#x601D;&#x60F3;&#xFF1A;" class="plugin-anchor" href="#&#x7B97;&#x6CD5;&#x601D;&#x60F3;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B97;&#x6CD5;&#x601D;&#x60F3;&#xFF1A;</h2>
+<h2 id="&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF08;c&#xFF1A;"><a name="&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF08;c&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF08;c&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF08;c&#xFF1A;" class="plugin-anchor" href="#&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF08;c&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF08;C++)&#xFF1A;</h2>
+<pre><code class="lang-c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;vector&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">BubbleSort</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; nums)</span> </span>{
+    <span class="hljs-keyword">int</span> sz = nums.size();
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span> ; i &lt; sz<span class="hljs-number">-1</span> ; i++) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span> ; j &lt; sz - <span class="hljs-number">1</span> - i; j++) {
+            <span class="hljs-keyword">if</span> (nums[j] &gt; nums[j+<span class="hljs-number">1</span>])
+                swap(nums[j], nums[j+<span class="hljs-number">1</span>]);
+        }
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; nums;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {
+        nums.push_back(rand() % <span class="hljs-number">100</span>);
+    }
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x6392;&#x5E8F;&#x524D;: &quot;</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {
+        <span class="hljs-built_in">cout</span> &lt;&lt; nums[i] &lt;&lt; <span class="hljs-string">&quot; &quot;</span>;
+    }
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+    BubbleSort(nums);
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x6392;&#x5E8F;&#x540E;: &quot;</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {
+        <span class="hljs-built_in">cout</span> &lt;&lt; nums[i] &lt;&lt; <span class="hljs-string">&quot; &quot;</span>;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h2 id="&#x8F93;&#x51FA;&#x7ED3;&#x679C;"><a name="&#x8F93;&#x51FA;&#x7ED3;&#x679C;" class="anchor-navigation-ex-anchor" href="#&#x8F93;&#x51FA;&#x7ED3;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8F93;&#x51FA;&#x7ED3;&#x679C;" class="plugin-anchor" href="#&#x8F93;&#x51FA;&#x7ED3;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8F93;&#x51FA;&#x7ED3;&#x679C;:</h2>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 排序算法">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="简单选择排序.html" class="navigation navigation-next " aria-label="Next page: 简单选择排序">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"冒泡排序","level":"1.11.1","depth":2,"next":{"title":"简单选择排序","level":"1.11.2","depth":2,"path":"排序算法/简单选择排序.md","ref":"排序算法/简单选择排序.md","articles":[]},"previous":{"title":"排序算法","level":"1.11","depth":1,"path":"排序算法/README.md","ref":"排序算法/README.md","articles":[{"title":"冒泡排序","level":"1.11.1","depth":2,"path":"排序算法/冒泡排序.md","ref":"排序算法/冒泡排序.md","articles":[]},{"title":"简单选择排序","level":"1.11.2","depth":2,"path":"排序算法/简单选择排序.md","ref":"排序算法/简单选择排序.md","articles":[]},{"title":"简单插入排序","level":"1.11.3","depth":2,"path":"排序算法/简单插入排序.md","ref":"排序算法/简单插入排序.md","articles":[]},{"title":"希尔排序","level":"1.11.4","depth":2,"path":"排序算法/希尔排序.md","ref":"排序算法/希尔排序.md","articles":[]},{"title":"归并排序","level":"1.11.5","depth":2,"path":"排序算法/归并排序.md","ref":"排序算法/归并排序.md","articles":[]},{"title":"快速排序","level":"1.11.6","depth":2,"path":"排序算法/快速排序.md","ref":"排序算法/快速排序.md","articles":[]},{"title":"堆排序","level":"1.11.7","depth":2,"path":"排序算法/堆排序.md","ref":"排序算法/堆排序.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","toggle-chapters","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/XiuXin-666/MyBook_DataStructre.git"},"livereload":{},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"./source/images/donate.png","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"修心","repo":"mysql","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","author":"修心","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"数据结构简单学","language":"zh-hans","links":{"sidebar":{"我的b站空间":"https://space.bilibili.com/479922793"}},"gitbook":"3.2.3","description":"这是我的第一本书"},"file":{"path":"排序算法/冒泡排序.md","mtime":"2021-01-10T14:24:51.430Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-19T13:58:58.061Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
